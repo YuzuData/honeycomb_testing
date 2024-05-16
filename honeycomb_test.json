@@ -12,48 +12,30 @@
     },
     "dataSources": [
         {
-            "id": "ev_chargers",
-            "name": "EV Charging Stations",
+            "id": "bby",
+            "name": "Bed Bath & Beyond Locations",
             "type": "csv",
-            "location": "https://raw.githubusercontent.com/carstonhernke/demo-h3-data/main/parquet/ev_chargers.parquet",
+            "location": "https://raw.githubusercontent.com/YuzuData/honeycomb_testing/main/bby_test.csv?token=GHSAT0AAAAAACMKXGYFDTBXA5VKH3UWXDOIZSGL5XQ",
             "fields": [
                 {
-                    "colname": "Latitude",
+                    "colname": "LATITUDE",
                     "type": "DOUBLE",
                     "geographicType": "lat",
                     "label": "Latitude",
                     "id": "latitude"
                 },
                 {
-                    "colname": "Longitude",
+                    "colname": "LONGITUDE",
                     "type": "DOUBLE",
                     "geographicType": "lon",
                     "label": "Longitude",
                     "id": "longitude"
                 },
                 {
-                    "colname": "Station Name",
+                    "colname": "FULL ADDRESS",
                     "type": "STRING",
-                    "label": "Station Name",
-                    "id": "station_name"
-                },
-                {
-                    "colname": "EV Network",
-                    "type": "STRING",
-                    "label": "EV Network",
-                    "id": "ev_network"
-                },
-                {
-                    "colname": "EV Connector Types",
-                    "type": "STRING",
-                    "label": "EV Connector Types",
-                    "id": "ev_connector_types"
-                },
-                {
-                    "colname": "Access Days Time",
-                    "type": "STRING",
-                    "label": "Access Rules",
-                    "id": "access_rules"
+                    "label": "Address",
+                    "id": "address"
                 }
             ],
             "authType": "none",
@@ -62,12 +44,12 @@
     ],
     "mapLayers": [
         {
-            "id": "ev_chargers_layer",
-            "label": "Taargus",
+            "id": "bby_locations_layer",
+            "label": "Bed Bath & Beyond Locations",
             "layerType": "PointLayer",
             "latitudeFieldId": "latitude",
             "longitudeFieldId": "longitude",
-            "dataSourceId": "ev_chargers",
+            "dataSourceId": "bby",
             "visible": true,
             "color": "#FF5733",
             "opacity": 0.8,
@@ -75,20 +57,19 @@
             "radiusMinPixels": 2,
             "enableTooltips": true,
             "tooltipFieldIds": [
-                "station_name",
-                "ev_network",
-                "ev_connector_types",
-                "access_rules"
+                "address",
+                "latitude",
+                "longitude"
             ]
         },
         {
             "id": "heatmap",
-            "label": "EV Chargers Heatmap",
+            "label": "Bed Bath & Beyond Location Heatmap",
             "layerType": "HoneycombLayer",
-            "dataSourceId": "ev_chargers",
+            "dataSourceId": "bby",
             "visible": false,
             "h3Field": "h3",
-            "measureField": "station_name",
+            "measureField": "address",
             "aggregationType": "count",
             "color": "red",
             "opacity": 0.4
@@ -99,8 +80,8 @@
             "cards": [
                 {
                     "cardType": "TitleCard",
-                    "title": "US Electric Vehicle Charging Stations 🚗⚡️",
-                    "subtitle": "Visualizing electric vehicle charging stations across the United States"
+                    "title": "Bed Bath & Beyond Locations",
+                    "subtitle": "Visualizing (former) Bed Bath & Beyond locations across the United States"
                 }
             ],
             "defaultOpen": true
@@ -112,19 +93,9 @@
                 },
                 {
                     "cardType": "BigNumberCard",
-                    "dataSourceId": "ev_chargers",
-                    "title": "Total Charging Stations",
-                    "subtitle": "Total number of electric vehicle charging stations",
-                    "measureFieldId": "station_name",
-                    "aggregationType": "count"
-                },
-                {
-                    "cardType": "HorizontalBarChartCard",
-                    "dataSourceId": "ev_chargers",
-                    "title": "Charging Stations by Network",
-                    "subtitle": "Number of charging stations per EV network",
-                    "dimensionFieldId": "ev_network",
-                    "measureFieldId": "station_name",
+                    "dataSourceId": "bby",
+                    "title": "(former) Bed Bath & Beyond locations",
+                    "measureFieldId": "address",
                     "aggregationType": "count"
                 }
             ],
