@@ -63,7 +63,7 @@
     "mapLayers": [
         {
             "id": "ev_chargers_layer",
-            "label": "EV Charging Stations",
+            "label": "Taargus",
             "layerType": "PointLayer",
             "latitudeFieldId": "latitude",
             "longitudeFieldId": "longitude",
