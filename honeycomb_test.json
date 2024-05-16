@@ -25,14 +25,14 @@
                 },
                 {
                     "colname": "LATITUDE",
-                    "type": "DOUBLE",
+                    "type": "FLOAT",
                     "geographicType": "lat",
                     "label": "Latitude",
                     "id": "latitude"
                 },
                 {
                     "colname": "LONGITUDE",
-                    "type": "DOUBLE",
+                    "type": "FLOAT",
                     "geographicType": "lon",
                     "label": "Longitude",
                     "id": "longitude"
