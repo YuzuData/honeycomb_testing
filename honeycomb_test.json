@@ -18,6 +18,12 @@
             "location": "https://raw.githubusercontent.com/YuzuData/honeycomb_testing/main/bby_test.csv",
             "fields": [
                 {
+                    "colname": "FULL ADDRESS",
+                    "type": "STRING",
+                    "label": "Address",
+                    "id": "address"
+                },
+                {
                     "colname": "LATITUDE",
                     "type": "DOUBLE",
                     "geographicType": "lat",
@@ -30,12 +36,6 @@
                     "geographicType": "lon",
                     "label": "Longitude",
                     "id": "longitude"
-                },
-                {
-                    "colname": "FULL ADDRESS",
-                    "type": "STRING",
-                    "label": "Address",
-                    "id": "address"
                 }
             ],
             "authType": "none",
