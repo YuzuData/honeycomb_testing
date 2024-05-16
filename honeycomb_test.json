@@ -15,7 +15,7 @@
             "id": "bby",
             "name": "Bed Bath & Beyond Locations",
             "type": "csv",
-            "location": "https://raw.githubusercontent.com/YuzuData/honeycomb_testing/main/bby_test.csv?token=GHSAT0AAAAAACMKXGYFSOYJLMJJRPLEZUF2ZSGMCGA",
+            "location": "https://raw.githubusercontent.com/YuzuData/honeycomb_testing/main/bby_test.csv?token=GHSAT0AAAAAACMKXGYFXHJO75JT2KR66ZYKZSGMKJQ",
             "fields": [
                 {
                     "colname": "LATITUDE",
