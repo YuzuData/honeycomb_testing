@@ -95,6 +95,7 @@
                     "cardType": "BigNumberCard",
                     "dataSourceId": "bby",
                     "title": "(former) Bed Bath & Beyond locations",
+                    "subtitle": "Total number of locations",
                     "measureFieldId": "address",
                     "aggregationType": "count"
                 }
