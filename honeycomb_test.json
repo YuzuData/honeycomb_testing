@@ -13,15 +13,51 @@
     "dataSources": [
         {
             "id": "bby",
-            "name": "Bed Bath & Beyond Locations",
+            "name": "Locations",
             "type": "csv",
-            "location": "https://raw.githubusercontent.com/YuzuData/honeycomb_testing/main/bby_test.csv",
+            "location": "https://raw.githubusercontent.com/YuzuData/honeycomb_testing/main/test_locations.csv",
             "fields": [
                 {
-                    "colname": "FULL ADDRESS",
+                    "colname": "CONCEPT",
+                    "type": "STRING",
+                    "label": "Concept",
+                    "id": "concept"
+                },
+                {
+                    "colname": "STORE NUM",
+                    "type": "INTEGER",
+                    "label": "Store Number",
+                    "id": "storenum"
+                },
+                {
+                    "colname": "ADDRESS",
                     "type": "STRING",
                     "label": "Address",
                     "id": "address"
+                },
+                {
+                    "colname": "CITY",
+                    "type": "STRING",
+                    "label": "City",
+                    "id": "city"
+                },
+                {
+                    "colname": "STATE",
+                    "type": "STRING",
+                    "label": "State",
+                    "id": "state"
+                },
+                {
+                    "colname": "PROPERTY",
+                    "type": "STRING",
+                    "label": "Property",
+                    "id": "property"
+                },
+                {
+                    "colname": "FULL ADDRESS",
+                    "type": "STRING",
+                    "label": "Full Address",
+                    "id": "fulladdress"
                 },
                 {
                     "colname": "LATITUDE",
@@ -32,10 +68,220 @@
                 },
                 {
                     "colname": "LONGITUDE",
-                    "type": "DOUBLE",
+                    "type": "DOUBLE", 
                     "geographicType": "lon",
                     "label": "Longitude",
                     "id": "longitude"
+                },
+                {
+                    "colname": "SQ FT",
+                    "type": "DOUBLE",
+                    "label": "Square Footage",
+                    "id": "sqft"
+                },
+                {
+                    "colname": "BASE RENT PSF",
+                    "type": "DOUBLE",
+                    "label": "Base Rent Per Square Foot",
+                    "id": "baserentpsf"
+                },
+                {
+                    "colname": "LED",
+                    "type": "STRING",
+                    "label": "Lease Expiration Date",
+                    "id": "led"
+                },
+                {
+                    "colname": "OPTIONS",
+                    "type": "STRING",
+                    "label": "Options",
+                    "id": "options"
+                },
+                {
+                    "colname": "PHYSICALITY - TAG",
+                    "type": "STRING",
+                    "label": "Physicality Tag",
+                    "id": "physicalitytag"
+                },
+                {
+                    "colname": "PHYSICALITY - DETAILS",
+                    "type": "STRING",
+                    "label": "Physicality Details", 
+                    "id": "physicalitydetails"
+                },
+                {
+                    "colname": "PRIORITY",
+                    "type": "INTEGER",
+                    "label": "Priority",
+                    "id": "priority"
+                },
+                {
+                    "colname": "TAG",
+                    "type": "STRING",
+                    "label": "Tag",
+                    "id": "tag"
+                },
+                {
+                    "colname": "NOTES",
+                    "type": "STRING",
+                    "label": "Notes",
+                    "id": "notes"
+                },
+                {
+                    "colname": "LINK - gPLACES",
+                    "type": "STRING",
+                    "label": "Google Places Link",
+                    "id": "linkgplaces"
+                },
+                {
+                    "colname": "LINK - COSTAR",
+                    "type": "STRING", 
+                    "label": "CoStar Link",
+                    "id": "linkcostar"
+                },
+                {
+                    "colname": "LINK - SUMMARY",
+                    "type": "STRING",
+                    "label": "Summary Link",
+                    "id": "linksummary"
+                },
+                {
+                    "colname": "CONTACT INFO",
+                    "type": "STRING",
+                    "label": "Contact Information", 
+                    "id": "contactinfo"
+                },
+                {
+                    "colname": "FIRST NAME",
+                    "type": "STRING",
+                    "label": "First Name",
+                    "id": "firstname" 
+                },
+                {
+                    "colname": "LABEL",
+                    "type": "STRING",
+                    "label": "Label",
+                    "id": "label"
+                },
+                {
+                    "colname": "LABEL - PROPERTY", 
+                    "type": "STRING",
+                    "label": "Property Label",
+                    "id": "labelproperty"
+                },
+                {
+                    "colname": "DETAILS",
+                    "type": "STRING",
+                    "label": "Details",
+                    "id": "details"
+                },
+                {
+                    "colname": "LATITUDE_LONGITUDE",
+                    "type": "STRING",
+                    "label": "Latitude/Longitude",
+                    "id": "latitudelongitude"
+                },
+                { 
+                    "colname": "EMAIL",
+                    "type": "STRING",
+                    "label": "Email",
+                    "id": "email"
+                },
+                {
+                    "colname": "POPULATION - 3 MILES",
+                    "type": "DOUBLE",
+                    "label": "Population Within 3 Miles",
+                    "id": "pop3mi"
+                },
+                {  
+                    "colname": "POP DENSITY - 3 MILES",
+                    "type": "DOUBLE",
+                    "label": "Population Density Within 3 Miles",
+                    "id": "popdens3mi"
+                },
+                {
+                    "colname": "MEDIAN HH INCOME - 3 MILES",
+                    "type": "DOUBLE",
+                    "label": "Median Household Income Within 3 Miles", 
+                    "id": "medinc3mi"
+                },
+                {
+                    "colname": "AVERAGE HH INCOME - 3 MILES",
+                    "type": "DOUBLE",  
+                    "label": "Average Household Income Within 3 Miles",
+                    "id": "avginc3mi"  
+                },
+                {
+                    "colname": "HHs $75K INCOME - 3 MILES",
+                    "type": "DOUBLE",
+                    "label": "Households With $75K+ Income Within 3 Miles",
+                    "id": "hh75k3mi"
+                },
+                {
+                    "colname": "HHs $100K INCOME - 3 MILES",  
+                    "type": "DOUBLE",
+                    "label": "Households With $100K+ Income Within 3 Miles",
+                    "id": "hh100k3mi"
+                },
+                {
+                    "colname": "DAYTIME POPULATION - 3 MILES",
+                    "type": "DOUBLE",
+                    "label": "Daytime Population Within 3 Miles",
+                    "id": "daypop3mi"   
+                },
+                {
+                    "colname": "DAYTIME POP DENSITY - 3 MILES",
+                    "type": "DOUBLE",
+                    "label": "Daytime Population Density Within 3 Miles",
+                    "id": "daypopdens3mi"
+                },
+                {
+                    "colname": "POPULATION - 5 MILES",
+                    "type": "DOUBLE", 
+                    "label": "Population Within 5 Miles",
+                    "id": "pop5mi"
+                },
+                {
+                    "colname": "POP DENSITY - 5 MILES",
+                    "type": "DOUBLE",
+                    "label": "Population Density Within 5 Miles",
+                    "id": "popdens5mi"  
+                },
+                {
+                    "colname": "MEDIAN HH INCOME - 5 MILES",
+                    "type": "DOUBLE",
+                    "label": "Median Household Income Within 5 Miles",
+                    "id": "medinc5mi"
+                },
+                {
+                    "colname": "AVERAGE HH INCOME - 5 MILES",
+                    "type": "DOUBLE",
+                    "label": "Average Household Income Within 5 Miles",
+                    "id": "avginc5mi"
+                },  
+                {
+                    "colname": "HHs $75K INCOME - 5 MILES",
+                    "type": "DOUBLE",
+                    "label": "Households With $75K+ Income Within 5 Miles",
+                    "id": "hh75k5mi"
+                },
+                {
+                    "colname": "HHs $100K INCOME - 5 MILES",
+                    "type": "DOUBLE",
+                    "label": "Households With $100K+ Income Within 5 Miles",
+                    "id": "hh100k5mi"
+                },
+                {
+                    "colname": "DAYTIME POPULATION - 5 MILES",
+                    "type": "DOUBLE",  
+                    "label": "Daytime Population Within 5 Miles",
+                    "id": "daypop5mi"
+                },
+                {  
+                    "colname": "DAYTIME POP DENSITY - 5 MILES",
+                    "type": "DOUBLE",
+                    "label": "Daytime Population Density Within 5 Miles",
+                    "id": "daypopdens5mi"
                 }
             ],
             "authType": "none",
@@ -89,7 +335,7 @@
         "rightSidebar": {
             "cards": [
                 {
-                    "cardType": "LegendCard"
+                    "cardType": "LegendCard",
                 },
                 {
                     "cardType": "BigNumberCard",
@@ -98,7 +344,16 @@
                     "subtitle": "Total number of locations",
                     "measureFieldId": "address",
                     "aggregationType": "count"
+                },
+                {
+                    "cardType": "HorizontalBarChartCard",
+                    "dataSourceId": "bby",
+                    "title": "Location Square Footage",
+                    "subtitle": " ",
+                    "measureFieldId": "sqft",
+                    "aggregationType": "count"
                 }
+
             ],
             "defaultOpen": true
         }
