@@ -335,7 +335,7 @@
         "rightSidebar": {
             "cards": [
                 {
-                    "cardType": "LegendCard",
+                    "cardType": "LegendCard"
                 },
                 {
                     "cardType": "BigNumberCard",
