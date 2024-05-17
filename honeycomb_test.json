@@ -352,7 +352,7 @@
                     "subtitle": "Square Footage",
                     "dimensionFieldId": "address",
                     "measureFieldId": "sqft",
-                    "aggregationType": "count"
+                    "aggregationType": "max"
                 }
 
             ],
