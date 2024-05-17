@@ -350,7 +350,6 @@
                     "dataSourceId": "bby",
                     "title": "Location Square Footage",
                     "subtitle": "Square Footage",
-                    "dimensionFieldId": "address",
                     "measureFieldId": "sqft"
                 }
 
