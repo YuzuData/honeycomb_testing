@@ -304,8 +304,8 @@
             "enableTooltips": true,
             "tooltipFieldIds": [
                 "address",
-                "latitude",
-                "longitude"
+                "sqft",
+                "baserentpsf"
             ]
         },
         {
