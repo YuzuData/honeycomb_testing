@@ -291,7 +291,7 @@
     "mapLayers": [
         {
             "id": "bby_locations_layer",
-            "label": "Bed Bath & Beyond Locations",
+            "label": "Locations",
             "layerType": "PointLayer",
             "latitudeFieldId": "latitude",
             "longitudeFieldId": "longitude",
@@ -310,7 +310,7 @@
         },
         {
             "id": "heatmap",
-            "label": "Bed Bath & Beyond Location Heatmap",
+            "label": "Location Heatmap",
             "layerType": "HoneycombLayer",
             "dataSourceId": "bby",
             "visible": false,
@@ -326,8 +326,8 @@
             "cards": [
                 {
                     "cardType": "TitleCard",
-                    "title": "Bed Bath & Beyond Locations",
-                    "subtitle": "Visualizing (former) Bed Bath & Beyond locations across the United States"
+                    "title": "Deathbed Tracker",
+                    "subtitle": "This app tracks assets of failing major retailers that will soon go on the market"
                 }
             ],
             "defaultOpen": true
