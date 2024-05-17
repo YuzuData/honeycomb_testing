@@ -349,7 +349,7 @@
                     "cardType": "HorizontalBarChartCard",
                     "dataSourceId": "bby",
                     "title": "Location Square Footage",
-                    "subtitle": " ",
+                    "subtitle": "Square Footage",
                     "measureFieldId": "sqft",
                     "aggregationType": "count"
                 }
